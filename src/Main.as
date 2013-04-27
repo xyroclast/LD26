@@ -1,25 +1,20 @@
 package 
 {
-	import flash.display.Sprite;
-	import flash.events.Event;
+	import org.flixel.*;
+	import com.spacecowboysoftware.minimalism.*;
 	
 	/**
 	 * ...
 	 * @author Jesse Abram
 	 */
-	public class Main extends Sprite 
+	public class Main extends FlxGame
 	{
 		
 		public function Main():void 
 		{
-			if (stage) init();
-			else addEventListener(Event.ADDED_TO_STAGE, init);
-		}
-		
-		private function init(e:Event = null):void 
-		{
-			removeEventListener(Event.ADDED_TO_STAGE, init);
-			// entry point
+			super(900, 900, GameState, 1);
+			FlxG.worldBounds = new FlxRect(0, 0, 900, 900);
+			forceDebugger = true;
 		}
 		
 	}
