@@ -13,7 +13,9 @@ package com.spacecowboysoftware.minimalism
 		{
 			FlxG.bgColor = 0xff000000;
 			FlxG.mouse.show();
-			testText = new FlxText(0, 0, FlxG.width, "Hello, World!");
+			testText = new FlxText(0, 0, FlxG.width, "Minimalism");
+			testText.alignment = "center";
+			testText.size = 64;
 			add(testText);
 		}
 		
