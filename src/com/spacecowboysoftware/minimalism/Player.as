@@ -24,6 +24,10 @@ package com.spacecowboysoftware.minimalism
 				velocity.y = 100;
 			if (FlxG.keys.pressed("D"))
 				velocity.x = 100;
+			if ((!FlxG.keys.pressed("W") && !FlxG.keys.pressed("S")) ||(FlxG.keys.pressed("W") && FlxG.keys.pressed("S")))
+				velocity.y = 0;
+			if ((!FlxG.keys.pressed("A") && !FlxG.keys.pressed("D")) || (FlxG.keys.pressed("A") && FlxG.keys.pressed("D")))
+				velocity.x = 0;
 			if (x < 0)
 				x = 0;
 			if (x > 900 - 8)
