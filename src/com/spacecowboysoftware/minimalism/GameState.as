@@ -19,8 +19,8 @@ package com.spacecowboysoftware.minimalism
 			testText.size = 64;
 			add(testText);
 			player = new Player();
-			player.x = 200;
-			player.y = 200;
+			player.x = FlxG.width / 2 + 4;
+			player.y = FlxG.height / 2 + 4;
 			add(player);
 		}
 		
