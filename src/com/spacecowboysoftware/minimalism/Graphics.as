@@ -6,12 +6,8 @@ package com.spacecowboysoftware.minimalism
 	 */
 	public class Graphics 
 	{
-		
-		public function Graphics() 
-		{
-			
-		}
-		
+		//Square white pixel, 8 x 8
+		[Embed(source = "/data/WhitePixel.png")] public static const WhitePixel:Class;
 	}
 
 }
