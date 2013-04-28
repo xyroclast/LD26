@@ -63,6 +63,13 @@ package com.spacecowboysoftware.minimalism
 		
 		public function stabLeftEar():void
 		{
+			if (!leftEar)
+			{
+				var tempPan:int = FlxG.music._transform.pan;
+				FlxG.music._transform.pan = -1;
+				FlxG.play(Sounds.Stab);
+				FlxG.music._transform.pan = tempPan;
+			}
 			if (rightEar == true)
 			{
 				FlxG.music.stop();
@@ -76,6 +83,13 @@ package com.spacecowboysoftware.minimalism
 		
 		public function stabRightEar():void
 		{
+			if (!rightEar)
+			{
+				var tempPan:int = FlxG.music._transform.pan;
+				FlxG.music._transform.pan = 1;
+				FlxG.play(Sounds.Stab);
+				FlxG.music._transform.pan = tempPan;
+			}
 			if (leftEar == true)
 			{
 				FlxG.music.stop();

@@ -8,6 +8,7 @@ package com.spacecowboysoftware.minimalism
 	{
 		
 		[Embed(source = "/data/Minimalism2.mp3")] public static const Minimalism:Class;
+		[Embed(source = "/data/Stab.mp3")] public static const Stab:Class;
 	}
 
 }
