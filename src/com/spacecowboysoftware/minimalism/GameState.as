@@ -11,11 +11,15 @@ package com.spacecowboysoftware.minimalism
 		private var text2:FlxText;
 		private var player:Player;
 		private var backgroundSprite:FlxSprite;
+		private var stabCount:uint = 0;
+		private var leftEar:Boolean = false;
+		private var rightEar:Boolean = false;
+		private var bloodSprite:FlxSprite;
+		private var blackSprite:FlxSprite;
 		
 		override public function create():void
 		{
 			FlxG.bgColor = 0xff000000;
-			FlxG.mouse.show();
 			backgroundSprite = new FlxSprite(0, 0);
 			backgroundSprite.loadGraphic(Graphics.Background, true, false, 900, 900);
 			backgroundSprite.addAnimation("Cycle", [0, 1, 2,0,1,2,0,1,2,0,1,2,0,1,2,3,3,0, 1, 2,0,1,2,0,1,2,0,1,2,0,1,2,4,4], 10, true);
@@ -36,11 +40,66 @@ package com.spacecowboysoftware.minimalism
 			player.y = FlxG.height / 2 + 4;
 			//add(player);
 			FlxG.playMusic(Sounds.Minimalism);
+			bloodSprite = new FlxSprite(0, 0, Graphics.Blood);
+			blackSprite = new FlxSprite(0, 0, Graphics.Black);
 		}
 		
 		override public function update():void
 		{
 			super.update();
+			if (FlxG.keys.justPressed("Q"))
+			{
+				stabEye();
+			}
+			if (FlxG.keys.justPressed("W"))
+			{
+				stabLeftEar();
+			}
+			if (FlxG.keys.justPressed("E"))
+			{
+				stabRightEar();
+			}
+		}
+		
+		public function stabLeftEar():void
+		{
+			if (rightEar == true)
+			{
+				FlxG.music.stop();
+			}
+			else
+			{
+				FlxG.music._transform.pan = 1;
+			}
+			leftEar = true;
+		}
+		
+		public function stabRightEar():void
+		{
+			if (leftEar == true)
+			{
+				FlxG.music.stop();
+			}
+			else
+			{
+				FlxG.music._transform.pan = -1;
+			}
+			rightEar = true;
+		}
+		
+		public function stabEye():void
+		{
+			if (stabCount == 0)
+			{
+				add(bloodSprite);
+				FlxG.music._transform.pan = -1;
+			}
+			else if (stabCount == 1)
+			{
+				add(blackSprite);
+				FlxG.music._transform.pan = 1;
+			}
+			stabCount++;
 		}
 		
 	}

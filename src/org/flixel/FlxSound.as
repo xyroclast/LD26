@@ -63,7 +63,7 @@ package org.flixel
 		/**
 		 * Internal tracker for a Flash sound transform object.
 		 */
-		protected var _transform:SoundTransform;
+		public var _transform:SoundTransform;
 		/**
 		 * Internal tracker for the position in runtime of the music playback.
 		 */
