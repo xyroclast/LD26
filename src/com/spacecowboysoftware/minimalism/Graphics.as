@@ -8,6 +8,7 @@ package com.spacecowboysoftware.minimalism
 	{
 		//Square white pixel, 8 x 8
 		[Embed(source = "/data/WhitePixel.png")] public static const WhitePixel:Class;
+		[Embed(source = "/data/Background.png")] public static const Background:Class;
 	}
 
 }
