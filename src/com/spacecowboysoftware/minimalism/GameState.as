@@ -37,7 +37,7 @@ package com.spacecowboysoftware.minimalism
 		private var credits:FlxText;
 		override public function create():void
 		{
-			credits = new FlxText(10, FlxG.height + 40, FlxG.width - 20, "Departing of the Sensory\n\nMade in 48 hours for Ludum Dare 26\n\nProgramming, Story, Art, and Sound by Jesse Abram\n\nUnder the hood: The Flixel game framework, made by Adam Saltsman\n\nTools used: Coded in AS3 using FlashDevelop with the Flex Compiler, Adobe Photoshop CS2 for the art, Apple's Garageband for the music, and BFXR (bfxr.net) for the stabbin' noise\n\nThank you for playing!");
+			credits = new FlxText(10, FlxG.height + 80, FlxG.width - 20, "Departing of the Sensory\n\nMade in 48 hours for Ludum Dare 26\n\nProgramming, Story, Art, and Sound by Jesse Abram\n\nUnder the hood: The Flixel game framework, made by Adam Saltsman\n\nTools used: Coded in AS3 using FlashDevelop with the Flex Compiler, Adobe Photoshop CS2 for the art, Apple's Garageband for the music, and BFXR (bfxr.net) for the stabbin' noise\n\nThank you for playing!");
 			credits.alignment = "center";
 			credits.size = 32;
 			FlxG.bgColor = 0xff000000;
